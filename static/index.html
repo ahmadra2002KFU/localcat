@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Transcription Pipeline</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Test Transcription Pipeline</h1>
+            <div id="status" class="status">
+                <span id="status-dot" class="status-dot"></span>
+                <span id="status-text">Click mic to start</span>
+            </div>
+        </header>
+
+        <main id="chat-container" class="chat-container">
+            <!-- Chat bubbles appear here -->
+        </main>
+
+        <footer>
+            <button id="mic-btn" class="mic-btn" title="Start/Stop microphone">
+                <svg id="mic-icon" viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                    <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                    <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+                </svg>
+            </button>
+            <select id="asr-select" class="asr-select" title="ASR Engine">
+                <option value="cohere" selected>Cohere</option>
+                <option value="whisper">Whisper</option>
+            </select>
+            <button id="clear-btn" class="clear-btn" title="Clear conversation">
+                Clear
+            </button>
+        </footer>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>
